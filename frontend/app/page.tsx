@@ -23,7 +23,7 @@ export default function Home() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!newThought.trim()) return;
-    await fetch('http://127.0.0.1:5000/api/thoughts', {
+    await fetch('https://thought-stream-backend.onrender.com/api/thoughts', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ text: newThought }),
@@ -34,12 +34,12 @@ export default function Home() {
 
   // --- NEW ACTIONS ---
   const deleteThought = async (id: string) => {
-    await fetch(`http://127.0.0.1:5000/api/thoughts/${id}`, { method: 'DELETE' });
+    await fetch(`https://thought-stream-backend.onrender.com/api/thoughts/${id}`, { method: 'DELETE' });
     fetchThoughts();
   };
 
   const likeThought = async (id: string) => {
-    await fetch(`http://127.0.0.1:5000/api/thoughts/${id}/like`, { method: 'PATCH' });
+    await fetch(`https://thought-stream-backend.onrender.com/api/thoughts/${id}/like`, { method: 'PATCH' });
     fetchThoughts();
   };
 
