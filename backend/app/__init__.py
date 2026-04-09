@@ -12,7 +12,7 @@ def create_app():
     app.config.from_object(Config)
     
     # 3. Add CORS so your Next.js frontend is allowed to talk to it
-    CORS(app)
+    CORS(app, resources={r"/api/*": {"origins": "https://thought-stream-gamma.vercel.app"}})
 
     # 4. Fill the empty database boxes we made in extensions.py
     extensions.mongo_client = MongoClient(app.config["MONGO_URI"])
