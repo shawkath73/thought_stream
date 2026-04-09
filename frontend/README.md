@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ThoughtStream 🚀
+A minimalist Full-Stack "Stream of Consciousness" application built to demonstrate modern web architecture, cloud integration, and agentic system foundations.
 
-## Getting Started
+## 🏗 Architecture
+This project follows a decoupled client-server architecture:
+- **Frontend**: Next.js (React) hosted on Vercel.
+- **Backend**: Flask (Python) hosted on Render.
+- **Database**: MongoDB Atlas (NoSQL) for real-time data persistence.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠 Tech Stack
+- **Frameworks**: Next.js 14, Flask
+- **Styling**: Tailwind CSS
+- **Database**: MongoDB (PyMongo)
+- **Deployment**: Render (API), Vercel (UI), GitHub Actions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Features
+- **Real-time Thoughts**: Post and view thoughts instantly.
+- **Engagement**: Integrated "Like" system using MongoDB `$inc` atomicity.
+- **Data Management**: Full CRUD capabilities with a focus on optimized API routing.
+- **Responsive UI**: Fully mobile-responsive design using Tailwind.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔧 Local Setup
 
-## Learn More
+### Backend
+1. Navigate to `/backend`
+2. Create a virtual environment: `python -m venv venv`
+3. Install dependencies: `pip install -r requirements.txt`
+4. Add your `.env` file with `MONGO_URI`.
+5. Run: `python run.py`
 
-To learn more about Next.js, take a look at the following resources:
+### Frontend
+1. Navigate to `/frontend`
+2. Install packages: `npm install`
+3. Run development server: `npm run dev`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌐 Deployment
+The production API is hosted at: `https://thought-stream-backend.onrender.com/api/thoughts`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Developed as part of an Engineering Research workflow into Agentic Systems and Production ML.*
